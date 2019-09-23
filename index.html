@@ -5,7 +5,7 @@
     <title>HTML Academy: Техномарт</title>
   </head>
   <body>
-    <header>
+    <header class="header">
       <div class="top">
         <!-- <img src="img/icon-search.svg" width="17" height="17" alt="Иконка поиск">
         <img src="img/icon-bookmark.svg" width="14" height="16" alt="Иконка закладки">
@@ -18,21 +18,21 @@
           <a href="#">Оформить заказ</a>
         </div>
       </div>
-      <div class="logo">
+      <div class="top_logo">
         <a href="index.html">
           <img src="img/logo-technomart.svg" width="136.5" height="21.59" alt="Логотип Техномарт">
         </a>
       </div>
-      <div class="who-are-we">
+      <p class="who-are-we">
         Интернет-магазин<br>
         строительных материалов<br>
         и инструментов для ремонта
-      </div>
+      </p>
       <!--
       <img src="img/icon-phone.svg" width="19" height="19" alt="Иконка телефон">
       -->
-      <span class="phone">+7 (812) 555-05-55</span>
-      <span class="address">г.Санкт-Петербург,ул.Б.Конюшенная,д.19/8</span>
+      <p class="phone">+7 (812) 555-05-55</p>
+      <p class="address">г.Санкт-Петербург,ул.Б.Конюшенная,д.19/8</p>
 
       <div class="login">
         <!-- <img src="img/icon-login.svg" width="20" height="17" alt="Иконка входа"> -->
@@ -42,28 +42,28 @@
         <a href="#">Регистрация</a>
       </div>
 
-      <nav>
-        <ul class="menu">
-          <li class="menu__main">
-            <a href="#">Главная</a>
+      <nav class="menu">
+        <ul class="menu__list">
+          <li class="menu__item">
+            <a class="menu__link" href="#">Главная</a>
           </li>
-          <li class="menu__company">
-            <a href="#">Компания</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Компания</a>
           </li>
-          <li class="menu__catalog">
-            <a href="#">Каталог</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Каталог</a>
           </li>
-          <li class="menu__news">
-            <a href="#">Новости</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Новости</a>
           </li>
-          <li class="menu__offers">
-            <a href="#">Спецпредложения</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Спецпредложения</a>
           </li>
-          <li class="menu__delivery">
-            <a href="#">Доставка</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Доставка</a>
           </li>
-          <li class="menu__contacts">
-            <a href="#">Контакты</a>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Контакты</a>
           </li>
         </ul>
       </nav>
@@ -77,28 +77,41 @@
 
       <section>
         <h2>О компании</h2>
-        <p>компания "техномарт"</p>
-        <p>Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и
-           строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.
-        </p>
-        <p>Мы можем доставить ваш товар в самые отдаленные точки России!
-           Техномарт работает со многими транспортными компаниями:
-        </p>
-        <ul>
-          <li>Деловые линии</li>
-          <li>Автотрейдинг</li>
-          <li>ЖелДорЭкспедиция</li>
-        </ul>
-        <a href="#">подробнее о компании</a>
-        <p>контакты</p>
-        <p>Вы можете забрать товар сами,
-           заехав в наш офис
-        </p>
-        <img src="img/map.png" width="300" height="158" alt="Карта">
-        <p>Заблудились? Напишите нам!</p>
+        <div class="we">
+
+
+        <div class="we__about">
+          <h3>компания "техномарт"</h3>
+          <p>Настоящий мужской шопинг начинается здесь! Огромный выбор товаров для ремонта и<br>
+            строительства не оставит равнодушным любителей сэкономить на гастарбайтерах.
+          </p>
+          <p>Мы можем доставить ваш товар в самые отдаленные точки России!<br>
+            Техномарт работает со многими транспортными компаниями:
+          </p>
+          <ul class="we__about we-delivery" >
+            <li class="we-delivery__item">Деловые линии</li>
+            <li class="we-delivery__item">Автотрейдинг</li>
+            <li class="we-delivery__item">ЖелДорЭкспедиция</li>
+          </ul>
+          <div class="we__about we-detail">
+            <a href="#">подробнее о компании</a>
+          </div>
+        </div>
+        <div class="we__contacts">
+          <h3>контакты</h3>
+          <p>Вы можете забрать товар сами,
+            заехав в наш офис
+          </p>
+          <img src="img/map.png" width="300" height="158" alt="Карта">
+          <div class="we__contacts we-write-us">
+            <button type="button" name="writeus-btn" form="writeus-form">Заблудились? Напишите нам!</button>
+          </div>
+        </div>
       </section>
     </main>
-    <footer>
+    <footer class="footer">
+      <div class="footer__top">
+
       <img src="" width="" height="" alt="Логотип Техномарт">
       <p>г.Санкт-Петербург,ул.Б.Конюшенная,д.19/8</p>
       <p>+7 (812) 555-05-55</p>
@@ -116,6 +129,7 @@
           <li><a href="#">Инструменты</a></li>
           <li><a href="#">Спецпредложения</a></li>
         </ul>
+      </div>
         <ul>
           <li><a href="#"><img src="img/icon-vk.svg" width="26" height="15" alt="Логотип ВКонтакте"></a></li>
           <li><a href="#"><img src="img/icon-fb.svg" width="12" height="22" alt="Логотип facebook"></a></li>
@@ -129,6 +143,24 @@
       <p>mail@htmlacademy.ru</p>
       <p>Разработано-</p>
       <p>htmlacademy.ru</p>
+
     </footer>
+
+    <section class="modal-writeus">
+      <h2>Напишите нам</h2>
+      <a class="writeus__close" href="index.html">
+        <img src="img/icon-close.svg" width="21" height="21" alt="Иконка закрыть">
+      </a>
+      <form class="writeus-form" id="writeus-form" action="mailto:info@htmlacademy.ru" method="post">
+          <label class="writeus-form__user-label" for="user-name">Ваше имя:</label>
+          <input class="writeus-form__user" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
+          <label class="writeus-form__email-label" for="user-email">Ваш e-mail</label>
+          <input class="writeus-form__email" id="user-email" type="email" name="email" placeholder="email@example.com">
+          <label class="writeus-form__comment-label" for="user_comment">Текст письма:</label>
+          <textarea class="writeus-form__comment" id="user_comment" name="comment" rows="5">В свободной форме</textarea>
+        <button class="writeus-form__submit" type="submit">отправить</button>
+      </form>
+    </section>
+
   </body>
 </html>

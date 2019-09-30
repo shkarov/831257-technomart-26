@@ -1,0 +1,203 @@
+*, *::before, *::after {
+  box-sizing: inherit;
+}
+
+
+a {
+  text-decoration: none;
+}
+
+html {
+  box-sizing: border-box;
+}
+
+html, body {
+  min-width: 1200px;
+  min-height: 3151px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: 'Cuprum', sans-serif;
+  font-weight: 400;
+
+  /*background-color: #ffffff;*/
+
+  /* временно для сетки */
+  /*background-image: url("../img/technomart-index.jpg");*/
+
+  background-position: 0 0;
+  background-size: 1200px auto;
+  background-repeat: no-repeat;
+}
+
+.container {
+  width: 940px;
+  margin: 0 auto;
+  padding: 0 10px;
+}
+
+.header {
+  margin: 0;
+  padding: 0;
+  /*margin-bottom: 120px;*/
+
+  background-color: transparent;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  /* временно для сетки */
+  min-height: 260px;
+}
+
+.header-top {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /*flex-wrap: nowrap;*/
+
+  /* временно для сетки */
+  min-height: 42px;
+  background-color: #293449;
+  /*background-color:transparent;
+  opacity: 0.1;*/
+}
+
+.header-top__menu {
+  margin: 0 auto;
+  padding: 0;
+  width: 940px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: nowrap;
+
+  color: white;
+  font-size: 17px;
+}
+
+.header-top__left {
+  margin: 0;
+  padding: 0;
+  width: 50%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  list-style: none;
+
+  /* временно для сетки */
+  /*min-height: 42px;*/
+  /*background-color: red;*/
+
+}
+
+.header-top__logo {
+  margin: 0;
+  padding: 0;
+
+  width: 220px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  min-height: 42px;
+  background-color: #ee3643;
+}
+
+.header-top__search {
+  margin-left: 0px;
+  padding: 0;
+}
+
+.header-top__search::before {
+  content: url("../img/icon-search.svg");
+  margin: 15px;
+}
+
+.header-top__right {
+  margin: 0;
+  padding: 0;
+
+  width: 50%;
+
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  justify-content: space-evenly;
+  list-style: none;
+
+  text-align: center;
+
+  /* временно для сетки */
+  min-height: 42px;
+}
+
+.header-top__bookmarks {
+  margin: 0;
+  padding: 0;
+}
+
+.header-top__bookmarks::before {
+  content: url("../img/icon-bookmark.svg");
+  margin: 15px;
+}
+
+.header-top__basket {
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+}
+
+.header-top__basket::before {
+  content: url("../img/icon-cart.svg");
+  margin: 15px;
+}
+
+.header-top_checkout {
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  width: 150px;
+
+  background-color: #63a63e;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  min-height: 42px;
+}
+
+.header-top_checkout a {
+  color: white;
+}
+
+.header-middle {
+    margin: 0;
+    padding: 0;
+
+    /* временно для сетки */
+    min-height: 158px;
+    background-color: blue;
+    opacity: 0.3;
+}
+
+.header-bottom {
+    margin: 0;
+    padding: 0;
+
+    /* временно для сетки */
+    min-height: 60px;
+    background-color: green;
+    opacity: 0.3;
+}

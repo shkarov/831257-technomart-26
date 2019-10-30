@@ -382,17 +382,27 @@
 
   <script>
   //модальное окно Товар добавлен
-  var buttonBuy = document.querySelector(".catalog-item__buy");
+  var buttonBuyCollection = document.querySelectorAll(".catalog-item__buy");
   var modalWindow = document.querySelector(".modal-cart");
   var closeButton = document.querySelector(".modal-close");
 
   var buttonCartOder = document.querySelector(".cart-order");
   var buttonCartBuy = document.querySelector(".cart-buy");
 
+  buttonBuyCollection.forEach(function(item) {
+    item.addEventListener("click", function (evt) {
+      evt.preventDefault();
+      modalWindow.classList.add("modal-show");
+
+    });
+  });
+
+/*
   buttonBuy.addEventListener("click", function (evt) {
     evt.preventDefault();
     modalWindow.classList.add("modal-show");
 });
+*/
   closeButton.addEventListener("click", function (evt) {
     evt.preventDefault();
     modalWindow.classList.remove("modal-show");
@@ -414,6 +424,20 @@
     evt.preventDefault();
     modalWindow.classList.remove("modal-show");
   });
+/*
+var buttonBuy = document.querySelectorAll(".catalog-item__buy");
+var modalWindow = document.querySelector(".modal-cart");
+
+
+buttonBuy.forEach(function(item) {
+item.addEventListener("click", function (evt) {
+evt.preventDefault();
+modalWindow.classList.add("modal-show");
+alert("!!");
+});
+});
+*/
+
   </script>
 
   </body>

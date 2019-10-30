@@ -10,7 +10,6 @@
   </head>
 
   <body>
-
     <header class="header">
       <div class="header-top">
         <div class="header-top__menu  container">
@@ -18,7 +17,11 @@
             <a class="header-top__logo" href="index.html">
               <img src="img/logo-technomart.svg" width="136.5" height="21.59" alt="Логотип Техномарт">
             </a>
-            <a class="header-top__search" href="#">Поиск:</a>
+
+            <form class="header-top__search" name="form-search" action="https:\\echo.htmlacademy.ru" method="POST">
+              <input class="search" type="text" name="search-goods" placeholder="Поиск">
+            </form>
+
           </div>
 
           <div class="header-top__right">
@@ -30,37 +33,31 @@
         </div>
       </div>
 
-      <ul class="header-middle container">
-        <li>
-          <h1 class="who-are-we">
-            Интернет-магазин<br>
-            строительных материалов<br>
-            и инструментов для ремонта
-          </h1>
-        </li>
-        <li>
-          <ul class="header-middle__contacts">
-            <li>
-              <a  class="header-middle__phone" href="tel:+78125550555">
-              +7 (812) 555-05-55
-              </a>
-            </li>
-            <li class="header-middle__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</li>
-          </ul>
-        </li>
-        <li>
-          <div class="header-middle__enter">
+      <div class="header-middle container">
+        <h1 class="who-are-we">
+          Интернет-магазин<br>
+          строительных материалов<br>
+          и инструментов для ремонта
+        </h1>
+        <div class="header-middle__contacts">
+          <a class="header-middle__phone" href="tel:+78125550555">+7 (812) 555-05-55</a>
+          <p class="header-middle__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. 19/8</p>
+        </div>
+        <ul class="header-middle__enter">
+          <li>
             <a class="header-middle__login" href="#">Войти</a>
+          </li>
+          <li>
             <a class="header-middle__signup" href="#">Регистрация</a>
-          </div>
-        </li>
-      </ul>
+          </li>
+        </ul>
+      </div>
 
       <nav>
         <ul class="header-bottom container">
-          <li class="header-bottom__item"><a href="#">Главная</a></li>
+          <li class="header-bottom__item"><a href="index.html">Главная</a></li>
           <li class="header-bottom__item"><a href="#">Компания</a></li>
-          <li class="header-bottom__item"><a href="#">Каталог</a></li>
+          <li class="header-bottom__item"><a href="catalog.html">Каталог</a></li>
           <li class="header-bottom__item"><a href="#">Новости</a></li>
           <li class="header-bottom__item"><a href="#">Спецпредложения</a></li>
           <li class="header-bottom__item"><a href="#">Доставка</a></li>
@@ -73,102 +70,86 @@
 
       <section class="offers container">
         <h2 class="visually-hidden">Наши предложения</h2>
-        <div class="offers-top">
-          <div class="offers-materials offers-box">
+
+        <ul class="offers-top">
+          <li class="offers-materials offers-box">
             <div class="offers-box__left">
               <p class="offers-box__quarter offers-box__title">Материалы</p>
               <div class="offers-box__quarter offers-box__slogun-area">
-                <p class="offers-box__slogun offers-materials__slogun">на любой вкус</p>
+                <a class="offers-box__slogun" href="#">на любой вкус</a>
               </div>
             </div>
-            <figure class="offers-box__right">
-              <img src="img/icon-1.svg">
-              <figure class="flag-new">
-                <img src="img/new-flag.png" width="60" height="59">
-              </figure>
-            </figure>
-          </div>
-          <div class="offers-instruments offers-box">
+            <div class="offers-box__right offers-box__materials"></div>
+          </li>
+          <li class="offers-instruments offers-box">
             <div class="offers-box__left">
               <p class="offers-box__quarter offers-box__title">Инструмент</p>
               <div class="offers-box__quarter offers-box__slogun-area">
-                <p class="offers-box__slogun offers-instruments__slogun">на все случаи</p>
+                <a class="offers-box__slogun" href="#">на все случаи</a>
               </div>
             </div>
-            <figure class="offers-box__right">
-              <img src="img/icon-2.svg">
-            </figure>
-          </div>
-          <div class="offers-technics offers-box">
+            <div class="offers-box__right offers-box__instruments"></div>
+          </li>
+          <li class="offers-technics offers-box">
             <div class="offers-box__left">
               <p class="offers-box__quarter offers-box__title">Техника</p>
               <div class="offers-box__quarter offers-box__slogun-area">
-                <p class="offers-box__slogun offers-technics__slogun">для стройки</p>
+                <a class="offers-box__slogun" href="#">для стройки</a>
               </div>
             </div>
-            <figure class="offers-box__right">
-              <img src="img/icon-3.svg">
-            </figure>
-          </div>
-          </div>
-        </div>
-        <div class="offers-bottom">
+            <div class="offers-box__right offers-box__technics"></div>
+          </li>
+        </ul>
 
-          <div class="offers-slider">
-            <div class="offers-slide__top">
+        <div class="offers-bottom">
+          <div class="offers-slider drills-img">
+            <div class="offers-slide__drills">
               <p class="offers-slide__title">дрели</p>
               <p class="offers-slide__text">Соседям на радость!</p>
             </div>
+            <div class="offers-slide__punchers display-off">
+                <p class="offers-slide__title">перфораторы</p>
+                <p class="offers-slide__text">Настоящие мужские игрушки</p>
+              </div>
             <div class="offers-slide__nav">
-              <figure class="offers-slide__left">
-                <img src="img/icon-left.svg">
-              </figure>
-                <figure class="offers-slide__right">
-                <img src="img/icon-right.svg">
-              </figure>
+              <a class="offers-slide__left" href="#"></a>
+              <a class="offers-slide__right" href="#"></a>
             </div>
             <div class="offers-slide__button">
-              <a class="red-button-middle" href="catalog.html">открыть каталог</a>
+              <a class="red-button button-middle" href="catalog.html">открыть каталог</a>
             </div>
           </div>
-          <div class="offers-right">
-            <div class="offers-discounts offers-box">
+          <ul class="offers-right">
+            <li class="offers-discounts offers-box">
               <div class="offers-box__left">
                 <p class="offers-box__quarter offers-box__title">Скидки 50%</p>
                 <div class="offers-box__quarter offers-box__slogun-area">
-                  <p class="offers-box__slogun offers-discounts__slogun">на 350 товаров</p>
+                  <a class="offers-box__slogun" href="#">на 350 товаров</a>
                 </div>
               </div>
-              <figure class="offers-box__right">
-                <img src="img/icon-4.svg">
-              </figure>
-            </div>
-            <div class="offers-delivery offers-box">
-              <div class="offers-delivery offers-box">
-                <div class="offers-box__left">
-                  <p class="offers-box__quarter offers-box__title">Доставка</p>
-                  <div class="offers-box__quarter offers-box__slogun-area">
-                    <p class="offers-box__slogun offers-delivery__slogun">бесплатно</p>
-                  </div>
+              <div class="offers-box__right offers-box__discounts"></div>
+            </li>
+            <li class="offers-delivery offers-box">
+              <div class="offers-box__left">
+                <p class="offers-box__quarter offers-box__title">Доставка</p>
+                <div class="offers-box__quarter offers-box__slogun-area">
+                  <a class="offers-box__slogun" href="#">бесплатно</a>
                 </div>
-                <figure class="offers-box__right">
-                  <img src="img/icon-5.svg">
-                </figure>
-            </div>
-          </div>
+              </div>
+              <div class="offers-box__right offers-box__delivery"></div>
+            </li>
+          </ul>
         </div>
       </section>
 
-      <section class="container">
+      <div class="container">
         <div class="popular-title">
           <h2 class="popular-heading">популярные товары:</h2>
-          <p class="red-button-long">
-            все популярные товары
-          </p>
+          <a class="red-button button-long" href="">все популярные товары</a>
         </div>
 
-        <section class="catalog-items">
-          <div class="catalog-item">
+        <ul class="catalog-items">
+          <li class="catalog-item">
             <div class="catalog-item__actions">
               <a href="#" class="catalog-item__buy">Купить</a>
               <a href="#" class="catalog-item__bookmark">В закладки</a>
@@ -177,8 +158,8 @@
             <div class="catalog-item__title">Перфоратор BOSCH BFG 9000</div>
             <div class="catalog-item__discount">32 500 Р.</div>
             <div class="catalog-item__price">25 500 Р.</div>
-          </div>
-          <div class="catalog-item">
+          </li>
+          <li class="catalog-item">
             <div class="catalog-item__actions">
               <a href="#" class="catalog-item__buy">Купить</a>
               <a href="#" class="catalog-item__bookmark">В закладки</a>
@@ -187,8 +168,8 @@
             <div class="catalog-item__title">Перфоратор BOSCH BFG 3000</div>
             <div class="catalog-item__discount">22 500 Р.</div>
             <div class="catalog-item__price">15 500 Р.</div>
-          </div>
-          <div class="catalog-item">
+          </li>
+          <li class="catalog-item">
             <div class="catalog-item__actions">
               <a href="#" class="catalog-item__buy">Купить</a>
               <a href="#" class="catalog-item__bookmark">В закладки</a>
@@ -197,8 +178,8 @@
             <div class="catalog-item__title">Перфоратор BOSCH BFG 6000</div>
             <div class="catalog-item__discount">30 500 Р.</div>
             <div class="catalog-item__price">23 500 Р.</div>
-          </div>
-          <div class="catalog-item">
+          </li>
+          <li class="catalog-item">
             <div class="catalog-item__flag">новинка</div>
             <div class="catalog-item__actions">
               <a href="#" class="catalog-item__buy">Купить</a>
@@ -208,48 +189,62 @@
             <div class="catalog-item__title">Перфоратор BOSCH BFG 2000</div>
             <div class="catalog-item__discount"></div>
             <div class="catalog-item__price">12 500 Р.</div>
-          </div>
-        </section>
+          </li>
+        </ul>
 
         <div class="popular-title">
           <h2 class="popular-heading">популярные производители:</h2>
-          <p class="red-button-long">
-            все производители
-          </p>
+          <a class="red-button button-long" href="">все производители</a>
         </div>
-        <div class="popular-manufacturers">
-          <a class="manufacturers-item" href="">
-            <img src="img/logo-bosch.png" alt="Логотип BOSCH"/>
-          </a>
-          <a class="manufacturers-item" href="">
-            <img src="img/logo-Makita.png" alt="Логотип Makita"/>
-          </a>
-          <a class="manufacturers-item" href="">
-            <img src="img/logo-DeWALT.png" alt="Логотип DeWALT"/>
-          </a>
-          <a class="manufacturers-item" href="">
-            <img src="img/logo-Interskol.png" alt="Логотип Интерскол"/>
-          </a>
-        </div>
-        <div class="popular-manufacturers">
-          <a class="manufacturers-item" href="">
-            <img src="img/logo-Hitachi.png" alt="Логотип Hitachi"/>
-          </a>
-          <a class="manufacturers-item" href="">
-            <img src="img/logo-LG.png" alt="Логотип LG"/>
-          </a>
-          <a class="manufacturers-item" href="">
-            <img src="img/logo-AEG.png" alt="Логотип AEG"/>
-          </a>
-          <a class="manufacturers-item" href="">
-            <img src="img/logo-Metabo.png" alt="Логотип Metabo"/>
-          </a>
-        </div>
-      </section>
+        <ul class="popular-manufacturers">
+          <li>
+            <a class="manufacturers-item" href="">
+              <img src="img/logo-bosch.png" alt="Логотип BOSCH"/>
+            </a>
+          </li>
+          <li>
+            <a class="manufacturers-item" href="">
+              <img src="img/logo-Makita.png" alt="Логотип Makita"/>
+            </a>
+          </li>
+          <li>
+            <a class="manufacturers-item" href="">
+              <img src="img/logo-DeWALT.png" alt="Логотип DeWALT"/>
+            </a>
+          </li>
+            <li>
+            <a class="manufacturers-item" href="">
+              <img src="img/logo-Interskol.png" alt="Логотип Интерскол"/>
+            </a>
+          </li>
+        </ul>
+        <ul class="popular-manufacturers">
+          <li>
+            <a class="manufacturers-item" href="">
+              <img src="img/logo-Hitachi.png" alt="Логотип Hitachi"/>
+            </a>
+          </li>
+          <li>
+            <a class="manufacturers-item" href="">
+              <img src="img/logo-LG.png" alt="Логотип LG"/>
+            </a>
+          </li>
+          <li>
+            <a class="manufacturers-item" href="">
+              <img src="img/logo-AEG.png" alt="Логотип AEG"/>
+            </a>
+          </li>
+          <li>
+            <a class="manufacturers-item" href="">
+              <img src="img/logo-Metabo.png" alt="Логотип Metabo"/>
+            </a>
+          </li>
+        </ul>
+      </div>
 
       <section class="service">
         <h2 class="visually-hidden">Наш сервис</h2>
-        <div class="service-container container">
+        <div class="service-container delivery container">
           <div class="service-container-offers">
             <p class="service-title">сервисы</p>
             <p class="service-text">Хороший интернет-магазин отличается от плохого не только ценами!<br>
@@ -257,23 +252,45 @@
             </p>
             <div class="services">
               <ul class="services-list">
-                <li class="services-list__delivery">Доставка</li>
-                <li class="services-list__item">Гарантия</li>
-                <li class="services-list__item">Кредит</li>
+                <li>
+                  <a id="services-list__delivery" class="services-list__item is-active" href="">Доставка</a>
+                </li>
+                <li>
+                  <a id="services-list__guarantee" class="services-list__item" href="">Гарантия</a>
+                </li>
+                <li>
+                  <a id="services-list__credit" class="services-list__item" href="">Кредит</a>
+                </li>
               </ul>
-              <div class="services-delivery">
-                <h3 class="services-delivery__title">доставка</h3>
-                <p class="service-delivery__text">
-                  Мы с удовольствием доставим ваш товар прямо<br>
-                  к вашему подъезду совершенно бесплатно!<br>
-                  Ведь мы неплохо заработаем,<br>
-                  поднимая его на ваш этаж.
-                </p>
+              <div class="services-article">
+                <div class="services-delivery">
+                  <h3 class="services__title">доставка</h3>
+                  <p class="service__text">
+                    Мы с удовольствием доставим ваш товар прямо<br>
+                    к вашему подъезду совершенно бесплатно!<br>
+                    Ведь мы неплохо заработаем,<br>
+                    поднимая его на ваш этаж.
+                  </p>
+                </div>
+                <div class="services-gaurantee display-off">
+                  <h3 class="services__title">гарантия</h3>
+                  <p class="service__text">
+                    Если купленный у нас товар поломается или заискрит,<br>
+                    а также в случае пожара, спровоцированного его возгоранием,<br>
+                    вы всегда можете быть уверены в нашей гарантии. Мы обменяем<br>
+                    сгоревший товар на новый.<br>
+                    Дом уж восстановите как-нибудь сами.
+                  </p>
+                </div>
+                <div class="services-credit display-off">
+                  <h3 class="services__title">кредит</h3>
+                  <p class="service__text">
+                    Залезть в долговую яму стало проще!<br>
+                    Кредитные консультанты придут вам на помощь.
+                  </p>
+                </div>
               </div>
             </div>
-            <figure class="service-delivery__car">
-              <img src="img/car.png" width="468" height="261">
-            </figure>
           </div>
         </div>
       </section>
@@ -295,7 +312,7 @@
                 <li class="we-delivery__item">ЖелДорЭкспедиция</li>
               </ul>
               <a class="we-buttons" href="#">
-                <p class="red-button-middle">Подробнее о компании</p>
+                <p class="red-button button-middle">Подробнее о компании</p>
               </a>
             </div>
             <div class="we-contacts">
@@ -303,11 +320,11 @@
               <p class="we-text">Вы можете забрать товар сами,<br>
                 заехав в наш офис
               </p>
-              <a class="we-about__img" href="">
+              <a class="we-map" href="">
                 <img src="img/map.png" width="300" height="158" alt="Карта">
               </a>
-              <a class="we-buttons" href="#">
-               <p class="red-button-long">Заблудились? Напишите нам!</p>
+              <a class="we-buttons" id="write-us" href="#">
+               <p class="red-button button-verylong">Заблудились? Напишите нам!</p>
               </a>
             </div>
           </article>
@@ -345,16 +362,16 @@
             +7 (812) 555-05-55
           </p>
           <ul class="menu-stock">
-            <li>
+            <li class="footer-menu__item">
               <a href="#">Материалы</a>
             </li>
-            <li>
+            <li class="footer-menu__item">
               <a href="#">Техника</a>
             </li>
-            <li>
+            <li class="footer-menu__item">
               <a href="#">Инструмент</a>
             </li>
-            <li>
+            <li class="footer-menu__item">
               <a href="#">Спецпредложения</a>
             </li>
           </ul>
@@ -391,49 +408,249 @@
           <li>
             <p class="footer-email">
               Обратная связь:<br>
-              <a class="button" href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
+              <a href="mailto:mail@htmlacademy.ru">mail@htmlacademy.ru</a>
             </p>
           </li>
           <li>
             <p class="footer-developed">
               Разработано - <br>
-              <a class="button" href="https://htmlacademy.ru">htmlacademy.ru</a>
+              <a href="https://htmlacademy.ru">htmlacademy.ru</a>
             </p>
           </li>
         </ul>
       </div>
     </footer>
 
-    <script>
-     <form class="modal-writeus"  id="writeus-form" action="mailto:info@htmlacademy.ru" method="post">
-        <h2 class="visually-hidden">Напишите нам</h2>
-        <a class="writeus-top" href="#">
-          <img src="img/icon-close.svg" width="21" height="21" alt="Иконка закрыть">
-        </a>
-        <div class="writeus-user-data">
-          <div class="writeus-user-name">
+    <section class="modal modal-writeus">
+      <h2 class="visually-hidden">Напишите нам</h2>
+      <button class="modal-close" type="button"></button>
+
+      <form class="form-writeus"  id="writeus-form" action="mailto:bobrush@inbox.ru" method="post">
+        <div class="writeus-user">
+          <p>
             <label class="writeus-label" for="user-name">Ваше имя:</label>
             <input class="writeus-user-input" id="user-name" type="text" name="name" placeholder="Имя Фамилия">
-          </div>
-          <div class="writeus-user-name">
+          </p>
+          <p>
             <label class="writeus-label" for="user-email">Ваш e-mail</label>
             <input class="writeus-user-input" id="user-email" type="email" name="email" placeholder="email@example.com">
-          </div>
-
-        </div>
-        <div class="writeus-user-text">
-            <label class="writeus-label" for="user_comment">Текст письма:</label>
-            <p class="writeus-user-comment">
-            <textarea id="user_comment" name="comment" rows="6" cols="62" placeholder="В свободной форме"></textarea>
           </p>
         </div>
+        <p>
+          <label class="writeus-label" for="user_comment">Текст письма:</label>
+          <textarea class="writeus-user-comment" id="user_comment" name="comment" rows="6" cols="62" placeholder="В свободной форме"></textarea>
+        </p>
+      </form>
 
-        <div class="writeus-bottom">
-          <div class="writeus-button">
-            <button class="writeus-submit" type="submit">отправить</button>
-          </div>
-        </div>
-     </form>
+      <div class="writeus-bottom">
+        <button class="writeus-submit" type="submit" form="writeus-form">отправить</button>
+      </div>
+
+    </section>
+
+    <section class="modal modal-map">
+      <h2 class="visually-hidden">Как до нас добраться</h2>
+
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037999040354!2d30.322010416394033!3d59.938716271971415!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5ba729%3A0xea9c53d4493c879f!2sBolshaya+Konyushennaya+ul.%2C+19%2C+Sankt-Peterburg%2C+Russia%2C+191186!5e0!3m2!1sen!2s!4v1441888483426" width="940" height="456" allowfullscreen></iframe>
+
+      <p><img src="img/map-big.png" width="940" height="456" alt="Офис компании по адресу ул. Большая Конюшенная 19/8, Санкт-Петербург"></p>
+    </section>
+
+    <script>
+      // переключение сервисов
+      var serviceDelivery = document.querySelector("#services-list__delivery");
+      var serviceGuarantee = document.querySelector("#services-list__guarantee");
+      var serviceCredit = document.querySelector("#services-list__credit");
+
+      var serviceImage = document.querySelector(".service-container");
+
+      var serviceDeliveryBlock = document.querySelector(".services-delivery");
+      var serviceGuaranteeBlock = document.querySelector(".services-gaurantee");
+      var serviceCreditBlock = document.querySelector(".services-credit");
+
+      serviceDelivery.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        if (!serviceDelivery.classList.contains("is-active")) {
+          serviceDelivery.classList.add("is-active");
+          serviceDeliveryBlock.classList.remove("display-off");
+          if (serviceGuarantee.classList.contains("is-active")) {
+            serviceGuarantee.classList.remove("is-active");
+            serviceGuaranteeBlock.classList.add("display-off");
+            serviceImage.classList.remove("guarantee");
+          }
+          if (serviceCredit.classList.contains("is-active")) {
+            serviceCredit.classList.remove("is-active");
+            serviceCreditBlock.classList.add("display-off");
+            serviceImage.classList.remove("credit");
+          }
+          serviceImage.classList.add("delivery");
+        }
+      });
+
+      serviceGuarantee.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        if (!serviceGuarantee.classList.contains("is-active")) {
+          serviceGuarantee.classList.add("is-active");
+          serviceGuaranteeBlock.classList.remove("display-off");
+          if (serviceDelivery.classList.contains("is-active")) {
+            serviceDelivery.classList.remove("is-active");
+            serviceDeliveryBlock.classList.add("display-off");
+            serviceImage.classList.remove("delivery");
+          }
+          if (serviceCredit.classList.contains("is-active")) {
+            serviceCredit.classList.remove("is-active");
+            serviceCreditBlock.classList.add("display-off");
+            serviceImage.classList.remove("credit");
+          }
+          serviceImage.classList.add("guarantee");
+        }
+      });
+
+        serviceCredit.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        if (!serviceCredit.classList.contains("is-active")) {
+          serviceCredit.classList.add("is-active");
+          serviceCreditBlock.classList.remove("display-off");
+          if (serviceDelivery.classList.contains("is-active")) {
+            serviceDelivery.classList.remove("is-active");
+            serviceDeliveryBlock.classList.add("display-off");
+            serviceImage.classList.remove("delivery");
+          }
+          if (serviceGuarantee.classList.contains("is-active")) {
+            serviceGuarantee.classList.remove("is-active");
+            serviceGuaranteeBlock.classList.add("display-off");
+            serviceImage.classList.remove("guarantee");
+          }
+          serviceImage.classList.add("credit");
+        }
+      });
+
+      //слайдер
+      var sliderLeft = document.querySelector(".offers-slide__left");
+      var sliderRight = document.querySelector(".offers-slide__right");
+      var slideDrills = document.querySelector(".offers-slide__drills");
+      var slidePunchers = document.querySelector(".offers-slide__punchers");
+      var backgroundImage = document.querySelector(".offers-slider");
+
+      sliderLeft.addEventListener("click", switchSlider);
+      sliderRight.addEventListener("click", switchSlider);
+
+      function switchSlider(evt) {
+        evt.preventDefault();
+        if (backgroundImage.classList.contains("drills-img")) {
+          backgroundImage.classList.remove("drills-img")
+          backgroundImage.classList.add("punchers-img")
+          slideDrills.classList.add("display-off");
+          slidePunchers.classList.remove("display-off");
+        } else {
+          backgroundImage.classList.remove("punchers-img")
+          backgroundImage.classList.add("drills-img")
+          slidePunchers.classList.add("display-off");
+          slideDrills.classList.remove("display-off");
+        }
+      }
+
+      //модальное окно Напишите нам
+      var writeusButton = document.querySelector("#write-us");
+      var modalWindow = document.querySelector(".modal-writeus");
+      var closeButton = document.querySelector(".modal-close");
+
+
+      var form = modalWindow.querySelector("form");
+      var userName = modalWindow.querySelector("[name=name]");
+      var userEmail = modalWindow.querySelector("[name=email]");
+      var userComment = modalWindow.querySelector("[name=comment]");
+
+      var isStorageSupport = true;
+      var storageName = "";
+      var storageEmail = "";
+
+      try {
+        storageName = localStorage.getItem("userName");
+        storageEmail = localStorage.getItem("userEmail");
+      } catch (err) {
+        isStorageSupport = false;
+      }
+
+      writeusButton.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        modalWindow.classList.add("modal-show");
+        if (storage) {
+          userName.value = storageName;
+          userEmail.value = storageEmail;
+          userComment.focus();
+        } else {
+          userName.focus();
+        }
+      });
+      closeButton.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        modalWindow.classList.remove("modal-show");
+      });
+      form.addEventListener("submit", function (evt) {
+        if (!userName.value || !userEmail.value || !userComment.value) {
+          evt.preventDefault();
+          console.log("Нужно заполнить поля!");
+        } else {
+          if (isStorageSupport) {
+            localStorage.setItem("userName", userName.value);
+            localStorage.setItem("userEmail", userEmail.value);
+          }
+        }
+      });
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          evt.preventDefault();
+          if (modalWindow.classList.contains("modal-show")) {
+            modalWindow.classList.remove("modal-show");
+          }
+        }
+      });
+
+      // map
+      var mapLink = document.querySelector(".we-map");
+      var mapPopup = document.querySelector(".modal-map");
+      var mapClose = mapPopup.querySelector(".modal-close");
+
+      mapLink.addEventListener("click", function (evt) {
+        evt.preventDefault();
+        mapPopup.classList.add("modal-show");
+      });
+      window.addEventListener("keydown", function (evt) {
+        if (evt.keyCode === 27) {
+          if (mapPopup.classList.contains("modal-show")) {
+            evt.preventDefault();
+            mapPopup.classList.remove("modal-show");
+          }
+        }
+      });
+
+        /*
+      //добавление товара в корзину и закладки
+      var bookmarksLink = document.querySelector(".catalog-item__bookmark");
+
+      var bookmarks = document.querySelector(".header-top__bookmarks");
+
+      console.log("bookmarksLink = ", bookmarksLink);
+      console.log("bookmarks = ", bookmarks);
+      //console.log("bookmarks.classList.value = ", bookmarks.classList.value);
+
+      bookmarksLink.addEventListener("click", function (evt) {
+        console.log("hoop !!!!!");
+        evt.preventDefault();
+        console.log("hoop !!!!!");
+        if (!bookmarks.classList.contains("bookmarks-add")) {
+          console.log("hoop !!!!!");
+          bookmarks.classList.add("bookmarks-add");
+        } else {
+          console.log("ok");
+        }
+      });
+
+      //var title = document.querySelector(".services-delivery__title").textContent;
+      //console.log("title = ", title);
+
+      */
     </script>
 
   </body>

@@ -7,30 +7,27 @@
     <link href="https://fonts.googleapis.com/css?family=Cuprum:400,400i,700,700i&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=PT+Sans:400,700&display=swap&subset=cyrillic" rel="stylesheet">
     <link href="css/normalize.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-min.css" rel="stylesheet">
   </head>
 
   <body>
     <header class="header">
+
       <div class="header-top">
         <div class="header-top__menu  container">
           <div class="header-top__left">
             <a class="header-top__logo" href="index.html">
               <img src="img/logo-technomart.svg" width="137" height="22" alt="Логотип Техномарт">
             </a>
-
             <form class="header-top__search" name="form-search" action="https://echo.htmlacademy.ru" method="POST">
               <input class="search" type="text" name="search-goods" placeholder="Поиск">
             </form>
-
           </div>
-
           <div class="header-top__right">
             <a class="header-top__bookmarks" href="#">Закладки: 0</a>
             <a class="header-top__basket" href="#">Корзина: 0</a>
             <a class="header-top_checkout" href="#">Оформить заказ</a>
           </div>
-
         </div>
       </div>
 
@@ -165,11 +162,11 @@
                 <a href="#" class="catalog-item__buy" tabindex="-1">Купить</a>
                 <a href="#" class="catalog-item__bookmark" tabindex="-1">В закладки</a>
               </div>
-            <div class="catalog-item__image"><img width="216" height="170" src="img/bfg3000.png" alt="Перфоратор BOSCH BFG 3000"></div>
-            <div class="catalog-item__title">Перфоратор BOSCH BFG 3000</div>
-            <div class="catalog-item__discount">22 500 Р.</div>
-            <div class="catalog-item__price">15 500 Р.</div>
-          </li>
+              <div class="catalog-item__image"><img width="216" height="170" src="img/bfg3000.png" alt="Перфоратор BOSCH BFG 3000"></div>
+              <div class="catalog-item__title">Перфоратор BOSCH BFG 3000</div>
+              <div class="catalog-item__discount">22 500 Р.</div>
+              <div class="catalog-item__price">15 500 Р.</div>
+            </li>
           <li class="catalog-item" tabindex="0">
               <div class="catalog-item__actions" tabindex="-1">
                 <a href="#" class="catalog-item__buy" tabindex="-1">Купить</a>
@@ -446,7 +443,6 @@
       <div class="writeus-bottom">
         <button class="writeus-submit" type="submit" form="writeus-form">отправить</button>
       </div>
-
     </section>
 
     <section class="modal modal-map">
@@ -456,181 +452,14 @@
       <button class="modal-close" type="button"></button>
     </section>
 
-    <script>
-// переключение сервисов
-var serviceDelivery = document.querySelector("#services-list__delivery");
-var serviceGuarantee = document.querySelector("#services-list__guarantee");
-var serviceCredit = document.querySelector("#services-list__credit");
-
-var serviceImage = document.querySelector(".service-container");
-
-var serviceDeliveryBlock = document.querySelector(".services-delivery");
-var serviceGuaranteeBlock = document.querySelector(".services-gaurantee");
-var serviceCreditBlock = document.querySelector(".services-credit");
-
-serviceDelivery.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  if (!serviceDelivery.classList.contains("is-active")) {
-    serviceDelivery.classList.add("is-active");
-    serviceDeliveryBlock.classList.remove("display-off");
-    if (serviceGuarantee.classList.contains("is-active")) {
-      serviceGuarantee.classList.remove("is-active");
-      serviceGuaranteeBlock.classList.add("display-off");
-      serviceImage.classList.remove("guarantee");
-    }
-    if (serviceCredit.classList.contains("is-active")) {
-      serviceCredit.classList.remove("is-active");
-      serviceCreditBlock.classList.add("display-off");
-      serviceImage.classList.remove("credit");
-    }
-    serviceImage.classList.add("delivery");
-  }
-});
-
-serviceGuarantee.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  if (!serviceGuarantee.classList.contains("is-active")) {
-    serviceGuarantee.classList.add("is-active");
-    serviceGuaranteeBlock.classList.remove("display-off");
-    if (serviceDelivery.classList.contains("is-active")) {
-      serviceDelivery.classList.remove("is-active");
-      serviceDeliveryBlock.classList.add("display-off");
-      serviceImage.classList.remove("delivery");
-    }
-    if (serviceCredit.classList.contains("is-active")) {
-      serviceCredit.classList.remove("is-active");
-      serviceCreditBlock.classList.add("display-off");
-      serviceImage.classList.remove("credit");
-    }
-    serviceImage.classList.add("guarantee");
-  }
-});
-
-serviceCredit.addEventListener("click", function (evt) {
-  evt.preventDefault();
-  if (!serviceCredit.classList.contains("is-active")) {
-    serviceCredit.classList.add("is-active");
-    serviceCreditBlock.classList.remove("display-off");
-    if (serviceDelivery.classList.contains("is-active")) {
-      serviceDelivery.classList.remove("is-active");
-      serviceDeliveryBlock.classList.add("display-off");
-      serviceImage.classList.remove("delivery");
-    }
-    if (serviceGuarantee.classList.contains("is-active")) {
-      serviceGuarantee.classList.remove("is-active");
-      serviceGuaranteeBlock.classList.add("display-off");
-      serviceImage.classList.remove("guarantee");
-    }
-    serviceImage.classList.add("credit");
-  }
-});
-
-//слайдер
-
-var sliderLeft = document.querySelector(".offers-slide__left");
-var sliderRight = document.querySelector(".offers-slide__right");
-var slideDrills = document.querySelector(".offers-slide__drills");
-var slidePunchers = document.querySelector(".offers-slide__punchers");
-var backgroundImage = document.querySelector(".offers-slider");
-
-sliderLeft.addEventListener("click", switchSlider);
-sliderRight.addEventListener("click", switchSlider);
-
-function switchSlider(evt) {
-  evt.preventDefault();
-  if (backgroundImage.classList.contains("drills-img")) {
-    backgroundImage.classList.remove("drills-img")
-    backgroundImage.classList.add("punchers-img")
-    slideDrills.classList.add("display-off");
-    slidePunchers.classList.remove("display-off");
-  } else {
-    backgroundImage.classList.remove("punchers-img")
-    backgroundImage.classList.add("drills-img")
-    slidePunchers.classList.add("display-off");
-    slideDrills.classList.remove("display-off");
-  }
-}
-
-      //модальное окно Напишите нам
-      var writeusButton = document.querySelector("#write-us");
-      var modalWindow = document.querySelector(".modal-writeus");
-      var closeButton = document.querySelector(".modal-close");
-
-
-      var form = modalWindow.querySelector("form");
-      var userName = modalWindow.querySelector("[name=name]");
-      var userEmail = modalWindow.querySelector("[name=email]");
-      var userComment = modalWindow.querySelector("[name=comment]");
-
-      var isStorageSupport = true;
-      var storageName = "";
-      var storageEmail = "";
-
-      try {
-        storageName = localStorage.getItem("userName");
-        storageEmail = localStorage.getItem("userEmail");
-      } catch (err) {
-        isStorageSupport = false;
-      }
-
-      writeusButton.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        modalWindow.classList.add("modal-show");
-        if (storage) {
-          userName.value = storageName;
-          userEmail.value = storageEmail;
-          userComment.focus();
-        } else {
-          userName.focus();
-        }
-      });
-      closeButton.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        modalWindow.classList.remove("modal-show");
-      });
-      form.addEventListener("submit", function (evt) {
-        if (!userName.value || !userEmail.value || !userComment.value) {
-          evt.preventDefault();
-          console.log("Нужно заполнить поля!");
-        } else {
-          if (isStorageSupport) {
-            localStorage.setItem("userName", userName.value);
-            localStorage.setItem("userEmail", userEmail.value);
-          }
-        }
-      });
-      window.addEventListener("keydown", function (evt) {
-        if (evt.keyCode === 27) {
-          evt.preventDefault();
-          if (modalWindow.classList.contains("modal-show")) {
-            modalWindow.classList.remove("modal-show");
-          }
-        }
-      });
-
-      // map
-      var mapLink = document.querySelector(".we-map");
-      var mapPopup = document.querySelector(".modal-map");
-      var mapClose = mapPopup.querySelector(".modal-close");
-
-      mapLink.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        mapPopup.classList.add("modal-show");
-      });
-      mapClose.addEventListener("click", function (evt) {
-        evt.preventDefault();
-        mapPopup.classList.remove("modal-show");
-      });
-      window.addEventListener("keydown", function (evt) {
-        if (evt.keyCode === 27) {
-          if (mapPopup.classList.contains("modal-show")) {
-            evt.preventDefault();
-            mapPopup.classList.remove("modal-show");
-          }
-        }
-      });
-
-    </script>
-
+    <section class="modal modal-cart">
+      <h2 class="cart__text">Товар добавлен в корзину!</h2>
+      <button class="modal-close" type="button"></button>
+      <p class="cart-bottom">
+        <button class="cart-buttons cart-order" type="button">оформить заказ</button>
+        <button class="cart-buttons cart-buy" type="button">продолжить покупки</button>
+      </p>
+    </section>
+    <script src="js/main-min.js"></script>
   </body>
 </html>

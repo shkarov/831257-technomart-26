@@ -116,7 +116,6 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-
 }
 
 .header-top__logo:hover {
@@ -252,14 +251,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  /*flex-wrap: nowrap;*/
 }
 
-/*
-.goods-add {
-  background-color: #ee3643;
-}
-*/
 .who-are-we {
   margin: 0 0 0 40px;
   padding: 0;
@@ -292,11 +285,6 @@ body {
 
   border: 3px solid #ffffff;
 
-/*
-  display: flex;
-  justify-content: flex-start;
-  align-items: center;
-*/
   vertical-align: baseline;
 }
 
@@ -565,7 +553,6 @@ body {
   flex-direction: column;
   align-items: stretch;
   justify-content: space-between;
-
 }
 
 .offers-top {
@@ -674,8 +661,8 @@ body {
   text-transform: uppercase;
 
   border-radius: 4px;
-  background-color: #000000;
-  opacity: 0.1;
+
+  background-color: rgba(0, 0, 0, 0.1);
 
   display: flex;
   flex-direction: row;
@@ -684,7 +671,7 @@ body {
 }
 
 .offers-box__slogun:hover {
-  opacity: 0.2;
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .offers-box__slogun:active {
@@ -1382,7 +1369,7 @@ body {
   width: 620px;
 
   box-shadow: 0px 20px 30px 10px #111111, 0 -7px #ff5257;
-
+  z-index: 100;
   display: none;
 }
 
@@ -1397,7 +1384,7 @@ body {
   background-color: transparent;
   border: 0;
   cursor: pointer;
-  z-index: 50;
+  z-index: 100;
 }
 
 .modal-close::before,
@@ -1492,20 +1479,20 @@ body {
 }
 
 .modal-map {
+  margin-top: -270px;
+  margin-left: -475px;
   padding: 0;
+
+  position: fixed;
 
   top: 50%;
   left: 50%;
 
   width: 950px;
   height: 460px;
+  background-color: white;
 
-  margin-top: -270px;
-  margin-left: -475px;
-/*
-  box-shadow: 0px 10px 20px 10px white;
-*/
-  background-color: transparent;
+  z-index: 70;
 
   display: none;
  }
@@ -1517,7 +1504,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: 80;
 }
 
 .modal-map img {
@@ -1527,7 +1514,7 @@ body {
 
 .modal-map iframe {
   position: relative;
-  z-index: 30;
+  z-index: 90;
 
   border: none;
 }
@@ -1544,10 +1531,9 @@ body {
   box-shadow: 0px 20px 30px 10px #111111, 0 -7px #ff5257;
 
   vertical-align: middle;
+  z-index: 90;
 
   display: none;
-
-  /*display: block;*/
 }
 
 .modal-show {
@@ -2126,7 +2112,6 @@ body {
   text-decoration: none;
 }
 
-
 .sort-direct {
   margin: 0;
   padding: 0;
@@ -2341,7 +2326,6 @@ body {
   font-weight: normal;
   font-size: 13px;
 }
-
 
 .catalog-pages__link {
   display: block;

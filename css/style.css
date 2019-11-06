@@ -42,7 +42,7 @@ body {
 
 .container {
   margin: 0 auto;
-  padding: 0;
+  padding: 0 10px;
   width: 940px;
 }
 
@@ -196,6 +196,18 @@ body {
 
 .header-top__bookmarks:hover::before {
   opacity: 1.0;
+}
+
+.bookmarks-count {
+  margin: 0 0 0 5px;
+  padding: 0;
+  vertical-align: baseline;
+}
+
+.basket-count {
+  margin: 0 0 0 5px;
+  padding: 0;
+  vertical-align: baseline;
 }
 
 .header-top__basket {
@@ -381,7 +393,6 @@ body {
   padding: 0;
 
   width: 300px;
-  min-height: 55px;
 
   display: flex;
   flex-direction: column;
@@ -389,20 +400,32 @@ body {
   align-items: center;
 }
 
-
-.header-middle__user-name {
-  margin: 0 0 7px 0;
-  padding: 12px 0 0 15px;
-  font-size: 21px;
+.header-middle__user-profile {
+  margin: 0;
+  padding: 0;
 
   width: 100%;
-  min-height: 45px;
-  background-color: #ffffff;
+
+  background-color: white;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-middle__user-name {
+  margin: 0;
+  padding: 10px 0 0 15px;
+
+  width: 100%;
+  height: 45px;
+  vertical-align: baseline;
+  font-size: 21px;
+
   color: #000000;
 
-  vertical-align: baseline;
   white-space: nowrap;
-  overflow: auto;
+  overflow: hidden;
 }
 
 .header-middle__user-name::before {
@@ -415,16 +438,6 @@ body {
   margin-right: 15px;
 }
 
-.header-middle__user-name::after {
-  content: url("../img/icon-logout.svg");
-  margin-left: 25px;
-}
-
-.header-middle__user-name:hover::after {
-  content: url("../img/icon-logout-dark.svg");
-  margin-left: 25px;
-}
-
 .header-middle__user-name:active {
   color: rgba(0, 0, 0, 0.3)
 }
@@ -434,13 +447,28 @@ body {
   margin-right: 15px;
 }
 
-.header-middle__user-name:active::after {
+.header-middle__user-exit {
+  margin: 0;
+  padding: 11px 0;
+}
+
+.header-middle__user-exit::before {
   content: url("../img/icon-logout.svg");
-  margin-right: 15px;
+  padding: 10px 10px;
+}
+
+.header-middle__user-exit:hover::before {
+  content: url("../img/icon-logout-dark.svg");
+  padding: 10px 10px;
+}
+
+.header-middle__user-exit:active::before {
+  content: url("../img/icon-logout.svg");
+  padding: 10px 10px;
 }
 
 .header-middle__user-data {
-  margin: 0;
+  margin: 7px 0 0 0;
   padding: 0;
 
   width: 100%;
@@ -715,7 +743,6 @@ body {
   width: 620px;
   height: 265px;
 
-  /*background-image: url("../img/slider1.jpg");*/
   color: #ffffff;
 
   display: flex;
@@ -1027,9 +1054,6 @@ body {
 .services-list__item.is-active {
   background-color: #ffffff;
   color: #32425c;
-}
-
-.services-article {
 }
 
 .services-delivery,
@@ -1534,10 +1558,6 @@ body {
   z-index: 90;
 
   display: none;
-}
-
-.modal-show {
-  display: block;
 }
 
 .cart__text {
@@ -2395,3 +2415,16 @@ body {
   font-weight: normal;
   font-size: 13px;
 }
+
+@keyframes fall {
+  0% { transform: translateY(-2000px); }
+  70% { transform: translateY(30px); }
+  90% { transform: translateY(-10px); }
+  100% { transform: translateY(0); }
+  }
+  
+  .modal-show {
+  display: block;
+  animation-name: fall;
+  animation-duration: 1.0s;
+  }
